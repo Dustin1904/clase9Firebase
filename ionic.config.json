@@ -1,0 +1,7 @@
+{
+  "name": "clase9Firebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
