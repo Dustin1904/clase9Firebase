@@ -4,14 +4,14 @@
 
 export const environment = {
   production: false,
-  firebase : {
-    apiKey: "AIzaSyAqBya88nGZFyaoN-3N2HeWp6HtCjIqD7o",
-    authDomain: "appm1-66a75.firebaseapp.com",
-    projectId: "appm1-66a75",
-    storageBucket: "appm1-66a75.firebasestorage.app",
-    messagingSenderId: "354214583889",
-    appId: "1:354214583889:web:b7a320f1075a7ef90de270",
-    measurementId: "G-0CD6W4HBJG"
+  firebase: {
+    apiKey: "AIzaSyDp4RCs8UwhBrTNivTVoBkbDwQ_s1LYxLI",
+    authDomain: "b-1accc.firebaseapp.com",
+    projectId: "b-1accc",
+    storageBucket: "b-1accc.firebasestorage.app",
+    messagingSenderId: "606986248368",
+    appId: "1:606986248368:web:df6c0a16fa5bc4ed9a9b75",
+    measurementId: "G-QDN8GEEH17"
   }
 };
 

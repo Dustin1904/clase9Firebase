@@ -1,5 +1,5 @@
-import { Inject, Injectable } from '@angular/core';
-import { Auth, User } from '@angular/fire/auth';
+import { Injectable } from '@angular/core';
+import { Auth } from '@angular/fire/auth';
 import { doc, docData, Firestore, setDoc } from '@angular/fire/firestore';
 import { getDownloadURL, ref, Storage, uploadString } from '@angular/fire/storage';
 import { Photo } from '@capacitor/camera';
@@ -11,7 +11,7 @@ export class AvatarService {
 	constructor(private auth: Auth, private firestore: Firestore, private storage: Storage) {}
 
 	getUserProfile() {
-		const user = this.auth.currentUser as User;
+		const user = this.auth.currentUser!;
 		const userDocRef = doc(this.firestore, `users/${user.uid}`);
 		return docData(userDocRef, { idField: 'id' });
 	}
@@ -23,7 +23,7 @@ export class AvatarService {
 
 		try {
 			await uploadString(storageRef, cameraFile.base64String!, 'base64');
-      
+
 			const imageUrl = await getDownloadURL(storageRef);
 
 			const userDocRef = doc(this.firestore, `users/${user.uid}`);
