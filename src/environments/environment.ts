@@ -4,14 +4,14 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: "AIzaSyAqBya88nGZFyaoN-3N2HeWp6HtCjIqD7o",
-    authDomain: "appm1-66a75.firebaseapp.com",
-    projectId: "appm1-66a75",
-    storageBucket: "appm1-66a75.firebasestorage.app",
-    messagingSenderId: "354214583889",
-    appId: "1:354214583889:web:4af52c032f2b844b0de270",
-    measurementId: "G-TE85YNZYXE"
+  firebaseConfig : {
+    apiKey: "AIzaSyBk6Q1lEfRtIVSPrhDz1wWHG5DejuvoAXU",
+    authDomain: "fir-repaso-b92ce.firebaseapp.com",
+    projectId: "fir-repaso-b92ce",
+    storageBucket: "fir-repaso-b92ce.firebasestorage.app",
+    messagingSenderId: "345243891546",
+    appId: "1:345243891546:web:149bcf34c148f53d5b6563",
+    measurementId: "G-YE475DF2LV"
   }
 };
 
