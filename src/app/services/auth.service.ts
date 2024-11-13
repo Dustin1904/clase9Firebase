@@ -11,8 +11,7 @@ import {
 })
 export class AuthService {
   constructor(private auth: Auth) {}
-
-  async register({ email, password }: { email: string; password: string }) {
+  async register({ email, password }:{email: string, password:string}) {
     try {
       const user = await createUserWithEmailAndPassword(
         this.auth,
@@ -24,7 +23,7 @@ export class AuthService {
       return null;
     }
   }
-  async login({ email, password }: { email: string; password: string }) {
+  async login({ email, password }:{email: string, password:string}) {
     try {
       const user = await signInWithEmailAndPassword(this.auth, email, password);
       return user;

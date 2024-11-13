@@ -10,17 +10,15 @@ import { AuthService } from '../services/auth.service';
 	styleUrls: ['./login.page.scss']
 })
 export class LoginPage implements OnInit {
-	credentials!: FormGroup;
-
+	credentials !: FormGroup;
 	constructor(
-		private fb: FormBuilder,
+		private fb: FormBuilder, 
 		private loadingController: LoadingController,
 		private alertController: AlertController,
 		private authService: AuthService,
 		private router: Router
 	) {}
 
-	// Easy access for form fields
 	get email() {
 		return this.credentials.get('email')!;
 	}
@@ -39,10 +37,9 @@ export class LoginPage implements OnInit {
 	async register() {
 		const loading = await this.loadingController.create();
 		await loading.present();
-
 		const user = await this.authService.register(this.credentials.value);
 		await loading.dismiss();
-
+		
 		if (user) {
 			this.router.navigateByUrl('/home', { replaceUrl: true });
 		} else {
@@ -64,7 +61,7 @@ export class LoginPage implements OnInit {
 		}
 	}
 
-	async showAlert(header: string, message: string) {
+	async showAlert(header:string, message:string) {
 		const alert = await this.alertController.create({
 			header,
 			message,
